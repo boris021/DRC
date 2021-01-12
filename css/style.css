@@ -318,6 +318,7 @@ template {
     color: #fff; }
 
 .header {
+  margin: 10px 50px 30px;
   background-color: #131313;
   padding: 24px 0; }
 
