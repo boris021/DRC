@@ -20,7 +20,7 @@ const autoprefixer = require('gulp-autoprefixer');
  function servSass() {
 	return src("./sass/*.sass")
 	.pipe(sass())
-	.pipe(autoprefixer({
+	.pipe(autoprefixer({ // autoprefixer
 		cascade: false
   }))
 	.pipe(dest("./css"))
