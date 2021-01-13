@@ -13,12 +13,13 @@ const autoprefixer = require('gulp-autoprefixer');
 	});
 	watch("./*.html").on('change', browserSync.reload);
 	watch("./sass/**/*.sass", servSass);
+	watch("./sass/**/*.scss", servSass);
 	watch("./js/*.js").on('change', browserSync.reload);
 };
 
 // compiler sass
  function servSass() {
-	return src("./sass/*.sass")
+	return src("./sass/**/*.sass", "./scss/**/*.scss")
 	.pipe(sass())
 	.pipe(autoprefixer({ // autoprefixer
 		cascade: false
